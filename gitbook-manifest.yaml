@@ -1,0 +1,18 @@
+name: gitbook-agent-connector-starter
+title: GitBook Agent Connector
+organization: organization_id
+visibility: private
+description: 'A starter integration for GitBook Agent Connector'
+script: src/index.tsx
+scopes:
+    - conversations:ingest
+configurations:
+    account:
+        properties:
+            developer_token:
+                type: string
+                title: Developer Token
+                description: An input to store a developer token for the integration.
+        required:
+            - developer_token
+target: organization

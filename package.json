@@ -1,0 +1,19 @@
+{
+    "name": "gitbook_agent_connector_starter",
+    "private": true,
+    "scripts": {
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+        "typecheck": "tsc --noEmit",
+        "publish": "gitbook publish ."
+    },
+    "dependencies": {
+        "@gitbook/api": "*",
+        "@gitbook/runtime": "*"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "*",
+        "@gitbook/cli": "*",
+        "@gitbook/eslint-config": "*",
+        "@gitbook/tsconfig": "*"
+    }
+}
