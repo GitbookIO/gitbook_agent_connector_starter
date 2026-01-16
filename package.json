@@ -14,6 +14,7 @@
         "@cloudflare/workers-types": "*",
         "@gitbook/cli": "*",
         "@gitbook/eslint-config": "*",
-        "@gitbook/tsconfig": "*"
+        "@gitbook/tsconfig": "*",
+        "ts-node": "^10.9.2"
     }
 }

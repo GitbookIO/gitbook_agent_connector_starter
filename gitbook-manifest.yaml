@@ -1,6 +1,6 @@
 name: gitbook-agent-connector-starter
 title: GitBook Agent Connector
-organization: organization_id
+organization: gitbook
 visibility: private
 description: 'A starter integration for GitBook Agent Connector'
 script: src/index.tsx

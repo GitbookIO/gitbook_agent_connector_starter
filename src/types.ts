@@ -12,7 +12,8 @@ export interface ConversationPart {
 
 export interface GitBookConversation {
     id: string;
-    parts: ConversationPart[];
+    subject?: string;
+    parts: Message[];
 }
 
 export type TaskPayload = {

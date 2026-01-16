@@ -1,4 +1,4 @@
-import { ConversationPart, GitBookConversation, Message } from './types';
+import { GitBookConversation, Message } from './types';
 
 /**
  * An example function to transform data to the format expected by GitBook Agent.
@@ -10,7 +10,7 @@ export const transformDataToGitBook = async (data: any): Promise<GitBookConversa
     const comments = data.comments || [];
 
     // Transform comments to GitBook conversation parts
-    const transformedParts: ConversationPart[] = comments.map((comment: any) => {
+    const transformedParts: Message[] = comments.map((comment: any) => {
         // Map author type to GitBook role
         // customer → user, agent → team-member
         let role: 'assistant' | 'user' | 'team-member' = 'assistant';
@@ -27,12 +27,13 @@ export const transformDataToGitBook = async (data: any): Promise<GitBookConversa
             body: comment.content || comment.body || '',
         };
 
-        return { message };
+        return message;
     });
 
     // Create conversation object expected by GitBook Agent
     const conversation: GitBookConversation = {
         id: `conv-${Date.now()}`,
+        subject: data.subject,
         parts: transformedParts,
     };
 
