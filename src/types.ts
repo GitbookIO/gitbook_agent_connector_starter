@@ -18,6 +18,7 @@ export interface GitBookConversation {
 
 export type TaskPayload = {
     type: 'fetchAndIngestData';
+    installation: string;
 };
 
 export type IntegrationContext = RuntimeContext<any, TaskPayload>;

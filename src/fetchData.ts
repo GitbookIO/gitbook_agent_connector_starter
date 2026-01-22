@@ -1,4 +1,6 @@
-export const fetchData = async (developerToken: string) => {
+export const fetchData = async (installation: any) => {
+    // Extract developer token for use in API calls (see example below)
+    // const developerToken = installation.configuration.developer_token;
     /**
      * Example API endpoint to fetch data
      *
